@@ -230,67 +230,107 @@
 
                         <!-- Tab Produk -->
                         <div class="tab-pane fade" id="produk" role="tabpanel" aria-labelledby="produk-tab">
-                            <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title d-flex justify-content-between align-items-center">
-                                Daftar Produk
-                                <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#produkModalTambah">Tambah Produk</button>
-                                </h5>
-                                <table class="table table-striped table-bordered">
-                                <thead class="table-light">
-                                    <tr>
-                                    <th>ID</th>
-                                    <th>Nama Produk</th>
-                                    <th>Kategori</th>
-                                    <th>Harga</th>
-                                    <th>Stok</th>
-                                    <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                    <td>1</td>
-                                    <td>Smartphone XYZ</td>
-                                    <td>Elektronik</td>
-                                    <td>Rp3.000.000</td>
-                                    <td>20</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#produkModalEdit"
-                                        data-id="1" data-nama="Smartphone XYZ" data-kategori="Elektronik" data-harga="3000000" data-stok="20">Edit</button>
-                                        <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#produkModalDelete" data-id="1" data-nama="Smartphone XYZ">Hapus</button>
-                                    </td>
-                                    </tr>
-                                    <tr>
-                                    <td>2</td>
-                                    <td>Jaket Hoodie</td>
-                                    <td>Fashion</td>
-                                    <td>Rp350.000</td>
-                                    <td>50</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#produkModalEdit"
-                                        data-id="2" data-nama="Jaket Hoodie" data-kategori="Fashion" data-harga="350000" data-stok="50">Edit</button>
-                                        <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#produkModalDelete" data-id="2" data-nama="Jaket Hoodie">Hapus</button>
-                                    </td>
-                                    </tr>
-                                    <tr>
-                                    <td>3</td>
-                                    <td>Blender ABC</td>
-                                    <td>Peralatan Rumah</td>
-                                    <td>Rp500.000</td>
-                                    <td>15</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#produkModalEdit"
-                                        data-id="3" data-nama="Blender ABC" data-kategori="Peralatan Rumah" data-harga="500000" data-stok="15">Edit</button>
-                                        <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#produkModalDelete" data-id="3" data-nama="Blender ABC">Hapus</button>
-                                    </td>
-                                    </tr>
-                                </tbody>
-                                </table>
-                            </div>
-                            </div>
-                        </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title d-flex justify-content-between align-items-center">
+        Daftar Produk
+        <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#produkModalTambah">Tambah Produk</button>
+      </h5>
+      <table class="table table-striped table-bordered">
+        <thead class="table-light">
+          <tr>
+            <th>ID</th>
+            <th>Nama Produk</th>
+            <th>Kategori</th>
+            <th>Harga</th>
+            <th>Stok</th>
+            <th>Deskripsi</th>
+            <th>Foto Produk</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Smartphone XYZ</td>
+            <td>Elektronik</td>
+            <td>Rp3.000.000</td>
+            <td>20</td>
+            <td>Smartphone dengan fitur terbaru dan kamera canggih.</td>
+            <td><img src="foto_produk/smartphone_xyz.jpg" alt="Smartphone XYZ" style="width: 80px; height: auto;"></td>
+            <td>
+              <button
+                class="btn btn-primary btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#editProdukModal"
+                data-id="1"
+                data-nama="Smartphone XYZ"
+                data-kategori="Elektronik"
+                data-harga="3000000"
+                data-stok="20"
+                data-deskripsi="Smartphone dengan fitur terbaru dan kamera canggih."
+                data-foto="foto_produk/smartphone_xyz.jpg"
+              >Edit</button>
 
-                        </div>
+              <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#produkModalDelete" data-id="1" data-nama="Smartphone XYZ">Hapus</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jaket Hoodie</td>
+            <td>Fashion</td>
+            <td>Rp350.000</td>
+            <td>50</td>
+            <td>Jaket hoodie nyaman dengan bahan berkualitas tinggi.</td>
+            <td><img src="foto_produk/jaket_hoodie.jpg" alt="Jaket Hoodie" style="width: 80px; height: auto;"></td>
+            <td>
+              <button
+                class="btn btn-primary btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#editProdukModal"
+                data-id="2"
+                data-nama="Jaket Hoodie"
+                data-kategori="Fashion"
+                data-harga="350000"
+                data-stok="50"
+                data-deskripsi="Jaket hoodie nyaman dengan bahan berkualitas tinggi."
+                data-foto="foto_produk/jaket_hoodie.jpg"
+              >Edit</button>
+
+              <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#produkModalDelete" data-id="2" data-nama="Jaket Hoodie">Hapus</button>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Blender ABC</td>
+            <td>Peralatan Rumah</td>
+            <td>Rp500.000</td>
+            <td>15</td>
+            <td>Blender multifungsi untuk kebutuhan dapur Anda.</td>
+            <td><img src="foto_produk/blender_abc.jpg" alt="Blender ABC" style="width: 80px; height: auto;"></td>
+            <td>
+              <button
+                class="btn btn-primary btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#editProdukModal"
+                data-id="3"
+                data-nama="Blender ABC"
+                data-kategori="Peralatan Rumah"
+                data-harga="500000"
+                data-stok="15"
+                data-deskripsi="Blender multifungsi untuk kebutuhan dapur Anda."
+                data-foto="foto_produk/blender_abc.jpg"
+              >Edit</button>
+
+              <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#produkModalDelete" data-id="3" data-nama="Blender ABC">Hapus</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
                     </div>
                 </div>
                     </form>
@@ -343,46 +383,66 @@
                     </div>
                 </div>
 
+                <!-- Modal Edit Produk -->
                 <div class="modal fade" id="editProdukModal" tabindex="-1" aria-labelledby="editProdukLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <form id="formEditProduk">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <h5 class="modal-title" id="editProdukLabel">Edit Produk</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                            <input type="hidden" id="editProdukId" name="produk_id">
-                            <div class="mb-3">
-                                <label for="editProdukNama" class="form-label">Nama Produk</label>
-                                <input type="text" class="form-control" id="editProdukNama" name="produk_nama" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="editProdukKategori" class="form-label">Kategori</label>
-                                <select class="form-select" id="editProdukKategori" name="produk_kategori" required>
-                                <option value="1">Elektronik</option>
-                                <option value="2">Fashion</option>
-                                <option value="3">Peralatan Rumah</option>
-                                <!-- Tambahkan opsi kategori lain sesuai data -->
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="editProdukHarga" class="form-label">Harga</label>
-                                <input type="number" class="form-control" id="editProdukHarga" name="produk_harga" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="editProdukStok" class="form-label">Stok</label>
-                                <input type="number" class="form-control" id="editProdukStok" name="produk_stok" required>
-                            </div>
-                            </div>
-                            <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                <div class="modal-dialog">
+                    <form id="formEditProduk" action="proses_edit_produk.php" method="POST" enctype="multipart/form-data">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="editProdukLabel">Edit Produk</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        <input type="hidden" id="editProdukId" name="produk_id">
+                        
+                        <div class="mb-3">
+                            <label for="editProdukNama" class="form-label">Nama Produk</label>
+                            <input type="text" class="form-control" id="editProdukNama" name="produk_nama" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="editProdukKategori" class="form-label">Kategori</label>
+                            <select class="form-select" id="editProdukKategori" name="produk_kategori" required>
+                            <option value="Elektronik">Elektronik</option>
+                            <option value="Fashion">Fashion</option>
+                            <option value="Peralatan Rumah">Peralatan Rumah</option>
+                            <!-- Tambahkan opsi kategori lain sesuai data -->
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="editProdukHarga" class="form-label">Harga</label>
+                            <input type="number" class="form-control" id="editProdukHarga" name="produk_harga" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="editProdukStok" class="form-label">Stok</label>
+                            <input type="number" class="form-control" id="editProdukStok" name="produk_stok" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="editProdukDeskripsi" class="form-label">Deskripsi Produk</label>
+                            <textarea class="form-control" id="editProdukDeskripsi" name="produk_deskripsi" rows="3" required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="editProdukFoto" class="form-label">Foto Produk (biarkan kosong jika tidak ingin mengubah)</label>
+                            <input type="file" class="form-control" id="editProdukFoto" name="produk_foto" accept="image/*">
+                            <div class="mt-2" id="previewFotoContainer" style="display:none;">
+                            <img id="previewFoto" src="#" alt="Preview Foto" style="max-width: 100%; height: auto;"/>
                             </div>
                         </div>
-                        </form>
+                        
+                        </div>
+                        <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                        </div>
                     </div>
+                    </form>
                 </div>
+                </div>
+
 
                 <div class="modal fade" id="deleteProdukModal" tabindex="-1" aria-labelledby="deleteProdukLabel" aria-hidden="true">
                     <div class="modal-dialog">
@@ -408,7 +468,7 @@
                 <!-- Modal Tambah Produk -->
                 <div class="modal fade" id="produkModalTambah" tabindex="-1" aria-labelledby="produkModalTambahLabel" aria-hidden="true">
                 <div class="modal-dialog">
-                    <form action="proses_tambah_produk.php" method="POST"> <!-- Ganti sesuai proses backend -->
+                    <form action="proses_tambah_produk.php" method="POST" enctype="multipart/form-data"> <!-- enctype untuk upload file -->
                     <div class="modal-content">
                         <div class="modal-header">
                         <h5 class="modal-title" id="produkModalTambahLabel">Tambah Produk</h5>
@@ -427,12 +487,24 @@
                             <label for="kategoriProduk" class="form-label">Kategori</label>
                             <select class="form-select" id="kategoriProduk" name="kategori_produk" required>
                             <option value="">Pilih kategori</option>
-                            <!-- Isi opsi kategori dari database atau statis -->
-                            <option value="kategori1">Kategori 1</option>
-                            <option value="kategori2">Kategori 2</option>
+                            <option value="Elektronik">Elektronik</option>
+                            <option value="Fashion">Fashion</option>
+                            <option value="Peralatan Rumah">Peralatan Rumah</option>
+                            <!-- Tambah kategori lain sesuai kebutuhan -->
                             </select>
                         </div>
-                        <!-- Tambah input lain sesuai kebutuhan -->
+                        <div class="mb-3">
+                            <label for="stokProduk" class="form-label">Stok</label>
+                            <input type="number" class="form-control" id="stokProduk" name="stok_produk" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="deskripsiProduk" class="form-label">Deskripsi</label>
+                            <textarea class="form-control" id="deskripsiProduk" name="deskripsi_produk" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fotoProduk" class="form-label">Foto Produk</label>
+                            <input class="form-control" type="file" id="fotoProduk" name="foto_produk" accept="image/*" required>
+                        </div>
                         </div>
                         <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
@@ -532,40 +604,53 @@
     });
   });
 
-  // --- Edit Produk ---
-  document.querySelectorAll('#produk tbody tr').forEach(row => {
-    const editBtn = row.querySelector('button.btn-primary');
-    editBtn.addEventListener('click', () => {
-      const id = row.cells[0].textContent.trim();
-      const nama = row.cells[1].textContent.trim();
-      const kategori = row.cells[2].textContent.trim();
-      const hargaText = row.cells[3].textContent.trim();
-      const stok = row.cells[4].textContent.trim();
+// Contoh script untuk mengisi data saat tombol Edit diklik
+var editProdukModal = document.getElementById('editProdukModal');
+editProdukModal.addEventListener('show.bs.modal', function (event) {
+  var button = event.relatedTarget;
 
-      // Ambil ID kategori dari nama kategori
-      // Contoh sederhana, sesuaikan dengan data asli
-      const kategoriMap = {
-        'Elektronik': '1',
-        'Fashion': '2',
-        'Peralatan Rumah': '3'
-      };
-      const kategoriId = kategoriMap[kategori] || '';
+  // Data produk dari atribut data-*
+  var id = button.getAttribute('data-id');
+  var nama = button.getAttribute('data-nama');
+  var kategori = button.getAttribute('data-kategori');
+  var harga = button.getAttribute('data-harga');
+  var stok = button.getAttribute('data-stok');
+  var deskripsi = button.getAttribute('data-deskripsi') || ''; // pastikan data-deskripsi ada pada tombol
+  var foto = button.getAttribute('data-foto') || '';
 
-      // Ubah format harga Rp menjadi angka (hapus Rp dan titik)
-      const harga = Number(hargaText.replace(/[^0-9]/g, ''));
+  // Isi form modal
+  document.getElementById('editProdukId').value = id;
+  document.getElementById('editProdukNama').value = nama;
+  document.getElementById('editProdukKategori').value = kategori;
+  document.getElementById('editProdukHarga').value = harga;
+  document.getElementById('editProdukStok').value = stok;
+  document.getElementById('editProdukDeskripsi').value = deskripsi;
 
-      document.getElementById('editProdukId').value = id;
-      document.getElementById('editProdukNama').value = nama;
-      document.getElementById('editProdukKategori').value = kategoriId;
-      document.getElementById('editProdukHarga').value = harga;
-      document.getElementById('editProdukStok').value = stok;
+  var previewContainer = document.getElementById('previewFotoContainer');
+  var previewFoto = document.getElementById('previewFoto');
 
+  if(foto){
+    previewFoto.src = foto; // URL foto produk
+    previewContainer.style.display = 'block';
+  } else {
+    previewFoto.src = '#';
+    previewContainer.style.display = 'none';
+  }
+});
 
-      const editProdukModal = new bootstrap.Modal(document.getElementById('editProdukModal'));
-      editProdukModal.show();
-    });
-  });
-
+// Preview gambar saat upload
+document.getElementById('editProdukFoto').addEventListener('change', function(event){
+  var input = event.target;
+  if(input.files && input.files[0]){
+    var reader = new FileReader();
+    reader.onload = function(e){
+      var previewFoto = document.getElementById('previewFoto');
+      previewFoto.src = e.target.result;
+      document.getElementById('previewFotoContainer').style.display = 'block';
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+});
   // --- Delete Produk ---
   document.querySelectorAll('#produk tbody tr').forEach(row => {
     const deleteBtn = row.querySelector('button.btn-danger');
