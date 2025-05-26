@@ -13,10 +13,12 @@
 - Member
   - Login / Register
   - Ubah Profile
+  - Ubah Password
+  - Cek Pesanan
 - Checkout
 - Menambahkan Wishlist
-- Simpan Belanjaan
+- Menambahkan Keranjang
 ### Teknologi
 - Backend : CodeIgniter 4
-- Frontend : Bootstrap, Jquery
+- Frontend : Bootstrap, Jquery, Sweet Alert
 - Database : MySQL
